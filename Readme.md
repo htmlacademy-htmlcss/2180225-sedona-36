@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Марина Тюгай](https://up.htmlacademy.ru/htmlcss/36/user/2180225).
-* Наставник: [Сергей Артёмов].
+* Наставник: [Сергей Артёмов](https://htmlacademy.ru/profile/firefoxic).
 
 ---
 
