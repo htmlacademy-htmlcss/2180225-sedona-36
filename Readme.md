@@ -4,7 +4,7 @@
 
 * Студент: [Марина Тюгай](https://up.htmlacademy.ru/htmlcss/36/user/2180225).
 * Наставник: [Сергей Артёмов](https://htmlacademy.ru/profile/firefoxic).
-
+ Смена наставника: [Наталья Соболева](https://htmlacademy.ru/profile/id1841813).
 ---
 
 _Не удаляйте файлы настроек проекта:_
