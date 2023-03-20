@@ -1,5 +1,560 @@
-img {
-	max-width: 100%;
-	height: auto;
-	object-fit: contain;
+@font-face{
+    font-family: 'PT Sans';
+    scr: url(../fonts/ptsans-400.woff2) format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'PT Sans Bold';
+    scr: url(../fonts/ptsans-700.woff2) format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+body{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0;
+margin: 0;
+max-width: 1200px;
+background: #FFFFFF;
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
+margin-left: auto;
+margin-right: auto;
+}
+
+
+
+.page-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+    background: #FFFFFF;
+    height: 64px;
+}
+.navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    align-items: center;
+    height: 64px;
+}
+.logo-city-of-sedona{
+
+    margin-left: 70px;
+}
+.navigation-list{
+    display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0;
+
+
+height: 64px;
+list-style: none;
+}
+.navigation-item{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 20px 16px;
+}
+.visually-hidden{
+    visibility: hidden;
+    display: none;
+}
+.navigation-link{
+    font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+color: #000000;
+text-decoration: none;
+}
+.button-header{
+width: 160px;
+height: 36px;
+background: #756157;
+border-radius: 4px;
+margin-right: 70px;
+margin-left: 33px;
+border-style: none;
+}
+.navigation-link-search{
+    margin-left: 254px;
+    text-decoration: none;
+}
+
+.popover{
+    display: none;
+
+}
+.popover.active{
+    display: block;
+    position: absolute;
+    top: 396px;
+    margin-left: 281px;
+}
+.popover::after {
+    content: "";
+    background-color: #000000;
+    opacity: 0.45;
+    position: absolute;
+}
+
+.popover-cart{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 64px 70px;
+background: #FFFFFF;
+box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+
+}
+
+.popover-container{
+    position: absolute;
+    background-color: rgba(242, 242, 242, 0.8);
+    width: 1200px;
+    height: 3681px;
+}
+
+.header-popover{
+    height: 52px;
+    width: 577px;
+    position: relative;
+}
+.popover-close-button{
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: none;
+    font-size: 14px;
+    color: #000000;
+    position: absolute;
+    right: -20px;
+    top: 0;
+}
+.check{
+    width: 402px;
+height: 48px;
+background-color: #F2F2F2;
+padding-right: 22px;
+margin-left: 24px;
+border-style: none;
+}
+.check_oute{
+margin-left: 17px;
+}
+.form-group-text-red{
+    margin: 0;
+    margin-left: 157px;
+    color: #FF5757;
+    margin-bottom: 23px;
+    margin-top: 4px;
+}
+.form-group-text-black{
+    margin: 0;
+    margin-left: 157px;
+    color: #333333;
+    margin-bottom: 23px;
+    margin-top: 4px;
+    font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+}
+.date_check{
+    font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 24px;
+}
+.popover-title{
+    margin: 0;
+    font-family: 'PT Sans';
+font-weight: 700;
+font-size: 26px;
+line-height: 36px;
+color: #000000;
+}
+.people{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.people_people{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.counter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F2F2F2;;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.counter_last{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F2F2F2;;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-left: 46px;
+}
+.counter_number{
+    margin-left: 23px;
+    margin-right: 23px;
+}
+.adults{
+    margin-right: 46px;
+}
+.popover-button{
+    cursor: pointer;
+    width: 555px;
+height: 60px;
+margin-top: 48px;
+background: #83B3D3;
+border-radius: 10px;
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 24px;
+color: #FFFFFF;
+border-style: none;
+}
+
+
+.footnote{
+    margin: 0;
+    margin-left: 10px;
+}
+.tooltip{
+    font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+color: #FFFFFF;
+}
+
+.tooltip::after {
+	background: #333333;
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+	color: #FFF;
+	content: attr(data-tooltip);
+	margin-top: -24px;
+	opacity: 0;
+	padding: 3px 7px;
+	position: absolute;
+	visibility: hidden;
+	transition: all 0.4s ease-in-out;
+    padding: 15px 18px 18px 22px;
+    transform: translateX(-45%)translateY(50px);
+}
+.tooltip:hover::after {
+	opacity: 1;
+	visibility: visible;
+}
+
+.welcome{
+    background-image: url(../images/head.jpg);
+    padding-top: 51px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-repeat: no-repeat;
+}
+.info{
+width: 1200px;
+height: 261px;
+left: 0;
+top: 485px;
+}
+.introductory-heading{
+    font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 25px;
+line-height: 36px;
+margin-left: 290px;
+margin-right: 290px;
+margin-top: 69px;
+margin-bottom: 25px;
+text-align:center;
+text-transform: uppercase;
+
+}
+.introductory-text{
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    margin: 25px 274px 69px 274px;
+}
+.strip{
+    width: 60px;
+height: 2px;
+background: rgba(255, 255, 255, 0.3);
+}
+.strip-center{
+    width: 60px;
+height: 2px;
+background: rgba(0, 0, 0, 0.3);
+}
+.grid{
+    display: grid;
+    grid-template-rows: repeat(3, 385px);
+}
+.the-town{
+    display: grid;
+    grid-template-columns: 400px 800px;
+}
+.real-tow{
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background: #82B3D3;
+}
+.maine-text{
+    font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 28px;
+width: 185px;
+height: 56px;
+text-align: center;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+.text{
+    font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+text-align: center;
+color: #FFFFFF;
+margin-left: 85px;
+margin-right: 85px;
+}
+.advantages-list{
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    padding: 0;
+    margin: 0;
+}
+.devils-bridge{
+    display: grid;
+    grid-template-columns: 800px 400px;
+}
+.bridge{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #82B3D3;
+}
+.advantages-description{
+    color: #333333;
+}
+.advantages-item{
+    list-style: none;
+    text-align: center;
+}
+.advantages-item-color{
+    background: rgba(131, 179, 211, 0.2);
+    height: 385px;
+}
+.advantages-title{
+    font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+text-align: center;
+text-transform: uppercase;
+color: #000000;
+width: 175px;
+height: 56px;
+margin-left: 112.5px;
+margin-top: 112.5px;
+}
+.introductory-text{
+    font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 26px;
+text-align: center;
+color: #333333;
+}
+
+
+.still-advantages-list{
+    display: flex;
+padding: 0;
+background: rgba(131, 179, 211, 0.12);
+}
+.advantages-item-food{
+    background-color: #FFFFFF;
+}
+
+.still-advantages-title{
+    font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+text-align: center;
+text-transform: uppercase;
+color: #000000;
+}
+.advantages-description{
+    font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+text-align: center;
+color: #333333;
+margin: 30px 85px 85px 85px;
+}
+.info-search{
+    width: 1200px;
+height: 406px;
+}
+.button-search-hotel{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 50px;
+gap: 10px;
+position: absolute;
+width: 376px;
+height: 52px;
+background: #756157;
+border-radius: 4px;
+margin-left: 412px;
+border-style: none;
+}
+.photo-newsletter{
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-image: url(../images/Subscribe.png);
+width: 1200px;
+height: 415px;
+}
+.newsletter{
+    display: flex;
+flex-direction: column;
+align-items: center;
+width: 684px;
+height: 214.86px;
+}
+.text-newsletter{
+    color: aliceblue;
+}
+.introductory-heading-newsletter{
+    font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 36px;
+text-transform: uppercase;
+}
+.introductory-text-newsletter{
+    font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 26px;
+text-align: center;
+}
+
+.newsletter-form{
+    display: flex;
+}
+.field{
+    flex-grow: 1;
+    padding-right: 452px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 19px;
+    border-radius: 10px 0 0 10px;
+    border-style: none;
+}
+
+.button-newsletter{
+    width: 200px;
+    font-size: 17px;
+    line-height: 21px;
+    border-radius: 0 10px 10px 0;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    background-color: #82B3D3;
+    text-transform: uppercase;
+    border-style: none;
+}
+.button{
+    cursor: pointer;
+}
+
+.page-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    align-items: center;
+}
+.footer-social-list{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-left: 81px;
+
+}
+.footer-link{
+    margin-right: 71px;
+}
+.telephone-number{
+    font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+
+text-align: center;
+text-transform: uppercase;
+padding: 0;
+}
+.vk{
+    padding-right: 26px;
+}
+.telegramm{
+    padding-right: 27px;
 }
